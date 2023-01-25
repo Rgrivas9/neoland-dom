@@ -1,0 +1,12 @@
+const btn = document.querySelector(".showme")
+const h1 = document.querySelector("#pillado")
+const ps = document.querySelectorAll("p")
+const pokemon = document.querySelectorAll(".pokemon")
+const data = document.querySelectorAll('[data-function="testMe"]')
+const third = document.querySelectorAll('[data-function="testMe"]')[2]
+console.log(btn)
+console.log(h1)
+console.log(ps)
+console.log(pokemon)
+console.log(data)
+console.log(third)
