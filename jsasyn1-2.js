@@ -13,6 +13,7 @@ const getCharsAsync2 = async (name) => {
 const createP = (name, list) => {
   let str = "";
   let i = -1;
+  if (list.length==0){str+="No se han encontrado coincidencias"}
   for (country of list) {
     i++;
     if (i == 0) {
