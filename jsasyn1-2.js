@@ -60,13 +60,32 @@ const find = async (name) => {
 
 /* -------------------------------------------------------EVENTOS */
 btn.addEventListener("click", () => {
-  n++;
-  find(input.value);
-});
-document.addEventListener("keydown", (ev) => {
-  if (ev.which === 13) {
+  if (input.value != "" && isNaN(input.value)) {
     n++;
     find(input.value);
+  }
+  if (input.value == "") {
+    alert("Debes introducir algo para buscar");
+  }
+  if (isNaN(input.value) == false && input.value != "") {
+    alert("No se permite búsqueda de números");
+  }
+  input.value = "";
+});
+document.addEventListener("keydown", (ev) => {
+  if (input.value != "" && isNaN(input.value)) {
+    if (ev.which === 13) {
+      n++;
+      find(input.value);
+    }
+  }
+  if (ev.which === 13 && input.value == "") {
+    alert("Debes introducir algo para buscar");
+  }
+  if (ev.which === 13 && isNaN(input.value) == false && input.value != "") {
+    alert("No se permite búsqueda de números");
+  }
+  if (ev.which === 13) {
     input.value = "";
   }
 });
