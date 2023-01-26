@@ -17,16 +17,16 @@ const createP = (name, list) => {
     i++;
     if (i == 0) {
       str += `El nombre ${name} tiene un ${Math.round(
-        country.probability * 100
-      )} % de ser de ${country.country_id}`;
+        country.probability * 1000
+      )/10} % de ser de ${country.country_id}`;
     }
     if (i == list.length - 1) {
-      str += `y un ${Math.round(country.probability * 100)} % de ser de ${
+      str += `y un ${Math.round(country.probability * 1000)/10} % de ser de ${
         country.country_id
       }`;
     }
     if (i != 0 && i != list.length - 1) {
-      str += `, un ${Math.round(country.probability * 100)} % de ser de ${
+      str += `, un ${Math.round(country.probability * 1000)/10} % de ser de ${
         country.country_id
       }`;
     }
